@@ -6,7 +6,10 @@ const SearchExercises = () => {
     <Stack
      alignItems="center" mt="37px">
       <Typography 
-   
+          fontWeight={700}
+          sx={{
+            fontSize:{lg:'44px',xs:'30px'}
+          }}
       >
         Awesome Exercises You <br/>
         Should Know
