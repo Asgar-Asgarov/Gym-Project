@@ -39,6 +39,7 @@ const SearchExercises = () => {
         color:'#fff',
         textTransform:'none',
         position:'absolute',
+        right:'0',
         height:'56px',
         width:{lg:'175px',xs:'80px'},
         fontSize:{lg:'20px',xs:'14px'}      
