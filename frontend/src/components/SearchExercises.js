@@ -4,6 +4,7 @@ import { exerciseOptions,fetchData } from '../utils/fetchData';
 
 const SearchExercises = () => {
   const[search,setSearch] = useState('');
+  const[exercises,setExercises]=useState([]);
   const handleSearch = async () =>{
     if(search)
     {
@@ -14,9 +15,9 @@ const SearchExercises = () => {
       ||exercise.target.toLowerCasea().includes(search)    
       ||exercise.bodyPart.toLowerCasea().includes(search)    
       ||exercise.equipment.toLowerCasea().includes(search)    
-
-     )
-     
+     );
+     setSearch('');
+     setExercises(searchedExercises);     
     }
   };
   return (
