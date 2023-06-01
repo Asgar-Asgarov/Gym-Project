@@ -5,6 +5,7 @@ import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import BodyPart from "./BodyPart";
 import RightArrowIcon from "../assets/icons/right-arrow.png";
 import LeftArrowIcon from "../assets/icons/left-arrow.png";
+import usePreventBodyScroll from "../utils/usePreventBodyScroll";
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
@@ -27,8 +28,11 @@ const RightArrow = () => {
 };
 
 const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
+  
+  const { disableScroll, enableScroll } = usePreventBodyScroll();
   return (
-    <ScrollMenu  LeftArrow={LeftArrow} RightArrow={RightArrow}>
+    <div onMouseEnter={disableScroll} onMouseLeave={enableScroll} >
+    <ScrollMenu  LeftArrow={LeftArrow} RightArrow={RightArrow} onWheel={onWheel}>
       {data.map((item) => (
         <Box
           key={item.id || item}
@@ -40,7 +44,22 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
         </Box>
       ))}
     </ScrollMenu>
+    </div>
   );
 };
 
 export default HorizontalScrollbar;
+function onWheel(apiObj, ev)  {
+  const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
+
+  if (isThouchpad) {
+    ev.stopPropagation();
+    return;
+  }
+
+  if (ev.deltaY < 0) {
+    apiObj.scrollNext();
+  } else if (ev.deltaY > 0) {
+    apiObj.scrollPrev();
+  }
+}
