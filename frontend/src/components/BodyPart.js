@@ -18,6 +18,9 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         cursor: "pointer",
         gap: "47px"
       }}
+      onClick={()=>{
+        setBodyPart(item)
+      }}
     >
       <img
         src={Icon}
