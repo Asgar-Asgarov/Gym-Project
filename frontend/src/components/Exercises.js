@@ -11,8 +11,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   const paginate = (e,value) => {
    setCurrentPage(value);
+   console.log(value);
+   
 
-   window.scrollTo();
+   window.scrollTo({top:1800, behaviour:'smooth'});
   }
   return (
     <Box sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
@@ -30,7 +32,17 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         ))}
       </Stack>
       <Stack mt="100px" alignItems="center">
-        {console.log(exercises.length)}
+      {exercises.length > 9 && (
+          <Pagination
+            color="standard"
+            shape="rounded"
+            defaultPage={1}
+            count={Math.ceil(exercises.length / exercisesPerPage)}
+            page={currentPage}
+            onChange={paginate}
+            size="large"
+          />
+        )}
       </Stack>
     </Box>
   );
