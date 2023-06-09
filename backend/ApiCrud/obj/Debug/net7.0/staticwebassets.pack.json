@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\be8d38d7-e0b6-4460-b188-93b8edbfdcb6cat.jpg",
+      "PackagePath": "staticwebassets\\img\\be8d38d7-e0b6-4460-b188-93b8edbfdcb6cat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\f842902c-a590-4284-892a-520453bf189cdeer.jpg",
+      "PackagePath": "staticwebassets\\img\\f842902c-a590-4284-892a-520453bf189cdeer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\nature.jpg",
+      "PackagePath": "staticwebassets\\img\\nature.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ApiCrud.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ApiCrud.props",
+      "PackagePath": "build\\ApiCrud.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ApiCrud.props",
+      "PackagePath": "buildMultiTargeting\\ApiCrud.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ApiCrud.props",
+      "PackagePath": "buildTransitive\\ApiCrud.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
