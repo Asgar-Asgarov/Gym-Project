@@ -36,6 +36,7 @@ public class AccountController : BaseController
         AppUser appUser = new AppUser();
         appUser.Fullname=registerDto.Fullname;
         appUser.UserName=registerDto.UserName;
+       
 
         var result = await _userManager.CreateAsync(appUser,registerDto.Password);
         if(!result.Succeeded) return BadRequest(result.Errors);
