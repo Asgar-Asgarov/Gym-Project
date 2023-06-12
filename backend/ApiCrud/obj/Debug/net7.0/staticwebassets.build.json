@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MZGrqKRimxHH8DmLuj/k7EHoweur+cfSzaal149Wc0w=",
+  "Hash": "P9mF9QboAWPq44zyLbIQbh5bsIO2ZvLiI43WBzt8iOU=",
   "Source": "ApiCrud",
   "BasePath": "_content/ApiCrud",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\111388b7-916b-443c-b978-146a55a4f42de.png",
+      "SourceId": "ApiCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\",
+      "BasePath": "_content/ApiCrud",
+      "RelativePath": "img/111388b7-916b-443c-b978-146a55a4f42de.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\111388b7-916b-443c-b978-146a55a4f42de.png"
+    },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\be8d38d7-e0b6-4460-b188-93b8edbfdcb6cat.jpg",
       "SourceId": "ApiCrud",
@@ -49,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\f842902c-a590-4284-892a-520453bf189cdeer.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\ff49c97a-296b-493a-a8cf-832785087c95thumb-1920-153318.jpg",
+      "SourceId": "ApiCrud",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\",
+      "BasePath": "_content/ApiCrud",
+      "RelativePath": "img/ff49c97a-296b-493a-a8cf-832785087c95thumb-1920-153318.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ff49c97a-296b-493a-a8cf-832785087c95thumb-1920-153318.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\nature.jpg",

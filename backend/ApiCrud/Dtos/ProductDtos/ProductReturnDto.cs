@@ -8,11 +8,11 @@ public class ProductReturnDto
     public double DiscountPrice { get; set; }
     public DateTime CreatedTime { get; set; }
     public DateTime UpdatedTime { get; set; }
-    public CategoryInProductReturnDto Category { get; set; }
+    // public CategoryInProductReturnDto? Category { get; set; }
 }
 
-public class CategoryInProductReturnDto
-{
-  public int Id { get; set; }
-  public int Name { get; set; }
-}
+// public class CategoryInProductReturnDto
+// {
+//   public int Id { get; set; }
+//   public int Name { get; set; }
+// }

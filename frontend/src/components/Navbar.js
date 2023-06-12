@@ -34,15 +34,27 @@ const Navbar = () => {
         >
           Home
         </Link>
-        <a
-          href="#exercises"
+        <Link
+          to="/Blog"
           style={{
             textDecoration: "none",
             color: "#3A1212",
+            borderBottom: "3px solid #FF2625",
           }}
         >
-          Exercises
-        </a>
+          Blog
+        </Link>
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "#3A1212",
+            borderBottom: "3px solid #FF2625",
+          }}
+        >
+          Calculator
+        </Link>
+ 
       </Stack>
     </Stack>
   );

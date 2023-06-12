@@ -61,6 +61,7 @@ public class CatergoryController : BaseController
         if (category == null) return StatusCode(StatusCodes.Status404NotFound);
 
         CategoryReturnDto categoryReturnDto = _mapper.Map<CategoryReturnDto>(category);
+        //    CategoryInProductReturnDto categoryInProductReturnDto = _mapper.Map<CategoryInProductReturnDto>(category);
       
 
         return StatusCode(200, categoryReturnDto);

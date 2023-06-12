@@ -29,8 +29,8 @@ public class ProductController : BaseController
     public IActionResult GetAll(int page, string search)
     {
         var query = _appDbContext.Products
-        .Include(p=>p.Category)
-        .ThenInclude(c=>c.Products)    
+        .Include(p => p.Category)
+        .ThenInclude(c => c.Products)
         .Where(p => !p.IsDeleted);
 
         ProductListDto productListDto = new();
@@ -61,13 +61,14 @@ public class ProductController : BaseController
     public IActionResult GetOne(int id)
     {
         var product = _appDbContext.Products
-        .Include(p=>p.Category)
+        .Include(p => p.Category)
         .Where(p => !p.IsDeleted)
         .FirstOrDefault(p => p.Id == id);
         if (product == null) return StatusCode(StatusCodes.Status404NotFound);
 
         ProductReturnDto productReturnDto = _mapper.Map<ProductReturnDto>(product);
-        
+        // ProductInCategoryReturnDto productInCategoryReturnDto = _mapper.Map<ProductInCategoryReturnDto>(product);
+
         return StatusCode(200, productReturnDto);
     }
 
@@ -77,10 +78,10 @@ public class ProductController : BaseController
         // if (productCreateDto.Photo == null) return StatusCode(StatusCodes.Status409Conflict);
         // if (!productCreateDto.Photo.isImage()) return BadRequest("photo type deyil");
         // if (!productCreateDto.Photo.CheckImageSize(10)) return BadRequest("size duzgun deyil");
-        var category=_appDbContext.Categories
-        .Where(c=>!c.IsDeleted)
-        .FirstOrDefault(c=>c.Id==productCreateDto.CategoryId);
-        if(category==null)return StatusCode(StatusCodes.Status404NotFound);
+        var category = _appDbContext.Categories
+        .Where(c => !c.IsDeleted)
+        .FirstOrDefault(c => c.Id == productCreateDto.CategoryId);
+        if (category == null) return StatusCode(StatusCodes.Status404NotFound);
 
         Product newProduct = new();
 
