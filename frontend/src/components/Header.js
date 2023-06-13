@@ -7,12 +7,13 @@ import {
   List,
   ListItem,
   Toolbar,
-  Typography,
+  Typography,Box
 } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 import Logo from "../assets/images/Logo.png";
 
 const midLinks = [
+  { title: "home", path: "/" },
   { title: "shop", path: "/product" },
   { title: "blog", path: "/blog" },
   { title: "calculator", path: "/calculator" },
@@ -36,7 +37,7 @@ const navStyles = {
 const Header = () => {
   return (
     <AppBar position="static" color="transparent">
-      <Toolbar>
+      <Toolbar sx={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
         <Typography variant="h6">
           <Link to="/">
             <img
@@ -46,7 +47,8 @@ const Header = () => {
             />
           </Link>
         </Typography>
-        <List sx={{ display: "flex" }}>
+      <Box >
+      <List sx={{ display: "flex" }}>
           {midLinks.map(({ title, path }) => (
             <ListItem
               component={NavLink}
@@ -59,12 +61,17 @@ const Header = () => {
             </ListItem>
           ))}
         </List>
-        <IconButton
+      </Box>
+
+  
+      <Box display="flex" alignItems="center">
+      <IconButton
           size="large"
           edge="start"
           color="inherit"
           sx={{
             mr: 2,
+           
             "&:hover": {
               borderBottom: "3px solid #FF2625",
             },
@@ -92,6 +99,9 @@ const Header = () => {
             </ListItem>
           ))}
         </List>
+      </Box>
+
+
       </Toolbar>
     </AppBar>
   );
