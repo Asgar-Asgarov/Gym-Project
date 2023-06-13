@@ -4,9 +4,14 @@ import { Box, CssBaseline } from "@mui/material";
 
 import "./App.css";
 import Home from "./pages/Home";
+import Calculator from "./pages/Calculator";
 import ExerciseDetail from "./pages/ExerciseDetail";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
+import Product from "./pages/Product";
+import ProductDetail from "./pages/ProductDetail"
 
 const App = () => {
   return (
@@ -16,6 +21,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />
+        <Route path='calculator' element={<Calculator/>} />
+        <Route path='blog' element={<Blog/>} />
+        <Route path='blogdetail' element={<BlogDetail/>} />
+        <Route path='product' element={<Product/>} />
+        <Route path='productdetail' element={<ProductDetail/>} />
       </Routes>
       <Footer />
     </Box>
