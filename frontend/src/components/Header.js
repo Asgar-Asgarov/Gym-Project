@@ -15,7 +15,7 @@ import Logo from "../assets/images/Logo.png";
 const midLinks = [
   { title: "shop", path: "/product" },
   { title: "blog", path: "/blog" },
-  { title: "calculator", path: "/calculator" }  
+  { title: "calculator", path: "/calculator" },
 ];
 
 const rightLinks = [
@@ -23,17 +23,26 @@ const rightLinks = [
   { title: "register", path: "/register" },
 ];
 
+const navStyles = {
+  "&:hover": {
+    borderBottom: "3px solid #FF2625",
+  },
+  "&.active": {
+    borderBottom: "3px solid #FF2625",
+  },
+  textDecoration: "none"
+};
+
 const Header = () => {
   return (
     <AppBar position="static" color="transparent">
       <Toolbar>
         <Typography variant="h6">
-          <Link to="/" >
+          <Link to="/">
             <img
               src={Logo}
               alt="logo"
               style={{ width: "48px", height: "48px", margin: "0 20px" }}
-
             />
           </Link>
         </Typography>
@@ -43,15 +52,8 @@ const Header = () => {
               component={NavLink}
               to={path}
               key={path}
-              style={{ textDecoration: "none", color: "#3A1212" }}
-              sx={{
-                "&:hover": {
-                  borderBottom: "3px solid #FF2625",
-                },
-                '&.active': {
-                  borderBottom: "3px solid #FF2625",
-                }
-              }}
+              style={{  color: "#3A1212" }}
+              sx={navStyles}
             >
               {title.toUpperCase()}
             </ListItem>
@@ -65,10 +67,10 @@ const Header = () => {
             mr: 2,
             "&:hover": {
               borderBottom: "3px solid #FF2625",
-            },                
-            '&.active': {
+            },
+            "&.active": {
               borderBottom: "3px solid #FF2625",
-            }
+            },
           }}
         >
           <Badge badgeContent="4" color="secondary">
@@ -82,17 +84,9 @@ const Header = () => {
               to={path}
               key={path}
               style={{
-                textDecoration: "none",
                 color: "#3A1212",
               }}
-              sx={{
-                "&:hover": {
-                  borderBottom: "3px solid #FF2625",
-                },
-                '&.active': {
-                  borderBottom: "3px solid #FF2625",
-                }
-              }}
+              sx={navStyles}
             >
               {title.toUpperCase()}
             </ListItem>
