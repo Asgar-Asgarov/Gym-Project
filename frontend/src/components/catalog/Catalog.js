@@ -7,7 +7,7 @@ const Catalog = ({products,addProduct}) => {
     {/* {products.map(product=>(
     <li key={product.id}>{product.name}-{product.price}</li>       
       ))} */}
-      {console.log(products)}
+      {console.log(products.items)}
    </ul>
    <button onClick={addProduct}>Add product</button>
    </>
