@@ -1,16 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const Catalog = ({products,addProduct}) => {
+const Catalog = (products) => {
   return (
-   <>
+   <div>
    <ul>
-    {/* {products.map(product=>(
-    <li key={product.id}>{product.name}-{product.price}</li>       
-      ))} */}
-      {console.log(products.items)}
+   {Array.isArray(products.products) ? (products.products.map((product) => (
+         <li key={product.id}>{product.name}-{product.price}</li>
+        )
+        )):(<div>No products found.</div>)
+      }
+      {console.log(products)}
    </ul>
-   <button onClick={addProduct}>Add product</button>
-   </>
+   {/* <button onClick={addProduct}>Add product</button> */}
+   
+   </div>
   )
 }
 
