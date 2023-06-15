@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react';
-import Catalog from './catalog/Catalog';
-import Loader from './Loader'
+import Catalog from './Catalog';
+import Loader from '../Loader'
 
 
 const ProductFetch = () => {
