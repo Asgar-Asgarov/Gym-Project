@@ -4,9 +4,10 @@ const Catalog = ({products,addProduct}) => {
   return (
    <>
    <ul>
-    {products.map(product=>(
+    {/* {products.map(product=>(
     <li key={product.id}>{product.name}-{product.price}</li>       
-      ))}
+      ))} */}
+      {console.log(products)}
    </ul>
    <button onClick={addProduct}>Add product</button>
    </>

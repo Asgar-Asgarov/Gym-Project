@@ -25,6 +25,7 @@ public class ProductController : BaseController
     }
 
     [HttpGet]
+    
     // [Authorize]
     public IActionResult GetAll()
     {

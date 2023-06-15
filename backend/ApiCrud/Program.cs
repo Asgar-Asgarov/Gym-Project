@@ -14,6 +14,7 @@ var config = builder.Configuration;
 
 // Add services to the container.
 
+
 builder.Services.AddControllers()
 .AddFluentValidation(c=>c.RegisterValidatorsFromAssemblyContaining<ProductCreateDtoValidator>());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -65,7 +66,7 @@ builder.Services.AddIdentity<AppUser,IdentityRole>(options=>{
 		};
 	});
      
- 
+ builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -76,6 +77,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(opt=>{
+opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+});
 
 app.UseStaticFiles();
 

@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import Catalog from './catalog/Catalog';
 
-const [products, setProducts] = useState([])
+
+const ProductFetch = () => {
+  const [products, setProducts] = useState([])
 useEffect(() => {
-fetch('')
+fetch('http://localhost:5261/api/product')
 .then(response=>response.json())
 .then(data=>setProducts(data))
 }, [])
@@ -18,7 +20,6 @@ setProducts(prevState=>[...prevState,
 }])
 }
 
-const ProductFetch = () => {
   return (
     <div>
       <h1>Product fetch</h1>

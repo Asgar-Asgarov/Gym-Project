@@ -1,10 +1,11 @@
 import React from 'react';
-import {Typography} from "@mui/material"
+import {Typography} from "@mui/material";
+import ProductFetch from '../components/ProductFetch';
 
 const Product = () => {
   return (
     <Typography variant="h3">
-    .....Coming Soon 
+    <ProductFetch/>
     </Typography>
   )
 }
