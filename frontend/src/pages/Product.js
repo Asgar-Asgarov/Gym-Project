@@ -1,6 +1,6 @@
 import React from 'react';
 import {Typography} from "@mui/material";
-import ProductFetch from '../components/ProductFetch';
+import ProductFetch from '../components/catalog/ProductFetch';
 
 const Product = () => {
   return (
