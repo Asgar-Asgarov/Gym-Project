@@ -9,8 +9,7 @@ const Catalog = (products) => {
         )
         )):(<div>No products found.</div>)
       }
-      {console.log(products)}
-   </ul>
+         </ul>
    {/* <button onClick={addProduct}>Add product</button> */}
    
    </div>

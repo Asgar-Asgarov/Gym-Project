@@ -38,7 +38,7 @@ if (isLoading) {
   return (
     <div>
       <h1>Product fetch</h1>
-      <Catalog products={products.items} />
+      <Catalog products={products.items}  />
     </div>
   )
 }
