@@ -25,24 +25,39 @@ public class ProductController : BaseController
     }
 
     [HttpGet]
-    [Authorize]
-    public IActionResult GetAll(int page, string search)
+    // [Authorize]
+    public IActionResult GetAll()
     {
-        var query = _appDbContext.Products
+    //     var query = _appDbContext.Products
+    //     .Include(p => p.Category)
+    //     .ThenInclude(c => c.Products)
+    //     .Where(p => !p.IsDeleted);
+
+    //     ProductListDto productListDto = new();
+    //     productListDto.CurrentPage = page;
+    //     productListDto.TotalCount = query.Count();
+    //     if (!string.IsNullOrWhiteSpace(search))
+    //     {
+    //         query = query.Where(p => p.Name.Contains(search));
+    //     }
+
+    //     productListDto.items = query.Skip((page - 1) * 2)
+    //    .Take(2)
+    //    .Select(p => new ProductListItemDto
+    //    {
+    //        Name = p.Name,
+    //        ImageUrl = "http://localhost:5261/img/" + p.ImageUrl,
+    //        Price = p.Price,
+    //        DiscountPrice = p.DiscountPrice,
+    //        CreatedTime = p.CreatedTime,
+    //        UpdatedTime = p.UpdatedTime
+    //    }).ToList();
+    var products=_appDbContext.Products
         .Include(p => p.Category)
         .ThenInclude(c => c.Products)
         .Where(p => !p.IsDeleted);
-
-        ProductListDto productListDto = new();
-        productListDto.CurrentPage = page;
-        productListDto.TotalCount = query.Count();
-        if (!string.IsNullOrWhiteSpace(search))
-        {
-            query = query.Where(p => p.Name.Contains(search));
-        }
-
-        productListDto.items = query.Skip((page - 1) * 2)
-       .Take(2)
+    ProductListDto productListDto = new();
+    productListDto.items = products
        .Select(p => new ProductListItemDto
        {
            Name = p.Name,
@@ -52,6 +67,8 @@ public class ProductController : BaseController
            CreatedTime = p.CreatedTime,
            UpdatedTime = p.UpdatedTime
        }).ToList();
+
+      
 
         return StatusCode(200, productListDto);
     }
