@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P9mF9QboAWPq44zyLbIQbh5bsIO2ZvLiI43WBzt8iOU=",
+  "Hash": "7kH8oMmN22ji6amFL+OPr8nqqWobgbhaaebi/OFLnCM=",
   "Source": "ApiCrud",
   "BasePath": "_content/ApiCrud",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\111388b7-916b-443c-b978-146a55a4f42de.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\0f3c746e-20ed-4f72-b1f8-d38615de9d8bsportShoe.jpg",
       "SourceId": "ApiCrud",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\",
       "BasePath": "_content/ApiCrud",
-      "RelativePath": "img/111388b7-916b-443c-b978-146a55a4f42de.png",
+      "RelativePath": "img/0f3c746e-20ed-4f72-b1f8-d38615de9d8bsportShoe.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\111388b7-916b-443c-b978-146a55a4f42de.png"
+      "OriginalItemSpec": "wwwroot\\img\\0f3c746e-20ed-4f72-b1f8-d38615de9d8bsportShoe.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\be8d38d7-e0b6-4460-b188-93b8edbfdcb6cat.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\e918582c-f1e3-4d3f-a6fd-8afd52485297hantel.jpg",
       "SourceId": "ApiCrud",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\",
       "BasePath": "_content/ApiCrud",
-      "RelativePath": "img/be8d38d7-e0b6-4460-b188-93b8edbfdcb6cat.jpg",
+      "RelativePath": "img/e918582c-f1e3-4d3f-a6fd-8afd52485297hantel.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,58 +48,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\be8d38d7-e0b6-4460-b188-93b8edbfdcb6cat.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\f842902c-a590-4284-892a-520453bf189cdeer.jpg",
-      "SourceId": "ApiCrud",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\",
-      "BasePath": "_content/ApiCrud",
-      "RelativePath": "img/f842902c-a590-4284-892a-520453bf189cdeer.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\f842902c-a590-4284-892a-520453bf189cdeer.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\ff49c97a-296b-493a-a8cf-832785087c95thumb-1920-153318.jpg",
-      "SourceId": "ApiCrud",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\",
-      "BasePath": "_content/ApiCrud",
-      "RelativePath": "img/ff49c97a-296b-493a-a8cf-832785087c95thumb-1920-153318.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\ff49c97a-296b-493a-a8cf-832785087c95thumb-1920-153318.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\img\\nature.jpg",
-      "SourceId": "ApiCrud",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\Gym-Project\\backend\\ApiCrud\\wwwroot\\",
-      "BasePath": "_content/ApiCrud",
-      "RelativePath": "img/nature.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\nature.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\e918582c-f1e3-4d3f-a6fd-8afd52485297hantel.jpg"
     }
   ]
 }

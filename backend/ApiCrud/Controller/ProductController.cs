@@ -91,11 +91,11 @@ public class ProductController : BaseController
     }
 
     [HttpPost]
-    public IActionResult AddProduct(ProductCreateDto productCreateDto)
+    public IActionResult AddProduct([FromForm]ProductCreateDto productCreateDto)
     {
-        // if (productCreateDto.Photo == null) return StatusCode(StatusCodes.Status409Conflict);
-        // if (!productCreateDto.Photo.isImage()) return BadRequest("photo type deyil");
-        // if (!productCreateDto.Photo.CheckImageSize(10)) return BadRequest("size duzgun deyil");
+        if (productCreateDto.Photo == null) return StatusCode(StatusCodes.Status409Conflict);
+        if (!productCreateDto.Photo.isImage()) return BadRequest("photo type deyil");
+        if (!productCreateDto.Photo.CheckImageSize(10)) return BadRequest("size duzgun deyil");
         var category = _appDbContext.Categories
         .Where(c => !c.IsDeleted)
         .FirstOrDefault(c => c.Id == productCreateDto.CategoryId);
@@ -104,8 +104,8 @@ public class ProductController : BaseController
         Product newProduct = new();
 
         this._mapper.Map(productCreateDto, newProduct);
-        // newProduct.ImageUrl = productCreateDto.Photo.SaveImage(_webHostEnviroment, "img", productCreateDto.Photo.FileName);
-
+        newProduct.ImageUrl=productCreateDto.Photo.SaveImage(_webHostEnviroment,"img",productCreateDto.Photo.FileName);
+        
         _appDbContext.Products.Add(newProduct);
         _appDbContext.SaveChanges();
         return StatusCode(StatusCodes.Status201Created);

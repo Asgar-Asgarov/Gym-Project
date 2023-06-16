@@ -5,7 +5,7 @@ public class ProductCreateDto
 {  
     public int CategoryId { get; set; }
     public string? Name { get; set; }
-    // public IFormFile? Photo { get; set; }
+    public IFormFile? Photo { get; set; }
     public double Price { get; set; }
     public double DiscountPrice { get; set; }
     public bool IsActive { get; set; }
