@@ -1,12 +1,11 @@
-import React,{ useContext } from "react";
-import { Box,Typography } from "@mui/material";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+import React, { useContext } from 'react';
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import { Box, Typography } from '@mui/material';
 
-import BodyPart from "./BodyPart";
-import ExerciseCard from './ExerciseCard'
-import RightArrowIcon from "../assets/icons/right-arrow.png";
-import LeftArrowIcon from "../assets/icons/left-arrow.png";
-import usePreventBodyScroll from "../utils/usePreventBodyScroll";
+import ExerciseCard from './ExerciseCard';
+import BodyPart from './BodyPart';
+import RightArrowIcon from '../assets/icons/right-arrow.png';
+import LeftArrowIcon from '../assets/icons/left-arrow.png';
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
@@ -28,41 +27,20 @@ const RightArrow = () => {
   );
 };
 
-const HorizontalScrollbar = ({ data, bodyPart, setBodyPart,isBodyparts }) => {
-  
-  const { disableScroll, enableScroll } = usePreventBodyScroll();
-  return (
-    <div onMouseEnter={disableScroll} onMouseLeave={enableScroll} >
-    <ScrollMenu  LeftArrow={LeftArrow} RightArrow={RightArrow} onWheel={onWheel}>
-      {data.map((item) => (
-        <Box
-          key={item.id || item}
-          itemId={item.id || item}
-          title={item.id || item}
-          m="0 40px"
-        >
-          {isBodyparts ? <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
-           : <ExerciseCard exercise={item} />  
-        }
-        </Box>
-      ))}
-    </ScrollMenu>
-    </div>
-  );
-};
+const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
+  <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+    {data.map((item) => (
+      <Box
+        key={item.id || item}
+        itemId={item.id || item}
+        title={item.id || item}
+        m="0 40px"
+      >
+        {bodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} /> }
+      </Box>
+    ))}
+  </ScrollMenu>
+);
 
 export default HorizontalScrollbar;
-function onWheel(apiObj, ev)  {
-  const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
 
-  if (isThouchpad) {
-    ev.stopPropagation();
-    return;
-  }
-
-  if (ev.deltaY < 0) {
-    apiObj.scrollNext();
-  } else if (ev.deltaY > 0) {
-    apiObj.scrollPrev();
-  }
-}

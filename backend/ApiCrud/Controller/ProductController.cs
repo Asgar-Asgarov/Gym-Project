@@ -60,7 +60,7 @@ public class ProductController : BaseController
     ProductListDto productListDto = new();
     productListDto.items = products
        .Select(p => new ProductListItemDto
-       {
+       {   Id=p.Id,
            Name = p.Name,
            ImageUrl = "http://localhost:5261/img/" + p.ImageUrl,
            Price = p.Price,
