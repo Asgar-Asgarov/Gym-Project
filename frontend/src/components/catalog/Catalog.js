@@ -1,12 +1,12 @@
 import React from 'react';
 import ProductList from './ProductList';
-import { Box } from '@mui/material';
+import { Stack } from '@mui/material';
 
 const Catalog = (products) => {
   return (
-   <Box ml={4} mt={4}>
+   <Stack mt={4} sx={{ml:{xs:4,lg:10}}}>
     <ProductList products={products.products}/>   
-   </Box>
+   </Stack>
   )
 }
 

@@ -4,7 +4,7 @@ import {ThreeCircles} from 'react-loader-spinner';
 
 const Loader = () => {
   return (
-    <Stack direction="row" justifyContent="center" alignItems="center" width="
+    <Stack mt={10} direction="row" justifyContent="center" alignItems="center" width="
     100%">
     <ThreeCircles sx={{color:'#FF2625'}}/>
     </Stack>
