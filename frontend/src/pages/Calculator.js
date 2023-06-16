@@ -1,16 +1,17 @@
 import React from 'react';
 import BodyFatCalculator from '../components/Calculator/BodyFatCalculator';
 import BmiCalculator from '../components/Calculator/BmiCalculator';
+import CalorieCalculator from '../components/Calculator/CalorieCalculator';
 
 import { Stack } from '@mui/material';
 
 const Calculator = () => {
   return (
    <Stack  gap="60px"
-   sx={{  p: "20px", alignItems: "center",justifyContent:"center" }} margin={5}>
+   sx={{  p: "20px", alignItems: "center",justifyContent:"center" }} margin={7}>
        <BodyFatCalculator/>
        <BmiCalculator/>
-       
+       <CalorieCalculator/>     
    
    </Stack>
 

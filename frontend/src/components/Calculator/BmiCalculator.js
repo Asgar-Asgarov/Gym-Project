@@ -1,4 +1,15 @@
 import React, { useState } from 'react';
+import {
+  Typography,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Button,
+} from "@mui/material";
 
 const BmiCalculator = () => {
   const [weight, setWeight] = useState('');
