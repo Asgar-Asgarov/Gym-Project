@@ -1,26 +1,17 @@
 import React from "react";
 import {
-  List,
-  ListItem,
-  ListItemAvatar,
-  Avatar,
-  ListItemText,
+  List, ListItem
 } from "@mui/material";
+import ProductCard from "./ProductCard";
 
 const ProductList = (products) => {
   return (
     <List>
       {Array.isArray(products.products) ? (
-        products.products.map((product) => 
-        <ListItem key={product.id}>
-          <ListItemAvatar>
-              <Avatar src={product.imageurl}/>
-          </ListItemAvatar>
-          <ListItemText>
-           {product.name} - {product.price}
-          </ListItemText>
-        </ListItem>
-        )) : (
+        products.products.map((product) => (
+          <ProductCard key={product.id} product={product} />     
+           
+        ))) : (
           
         <div>No products found.{console.log("Products:"+products)}</div>
       )}

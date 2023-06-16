@@ -6,7 +6,7 @@ const Loader = () => {
   return (
     <Stack direction="row" justifyContent="center" alignItems="center" width="
     100%">
-    <ThreeCircles color='gray'/>
+    <ThreeCircles sx={{color:'#FF2625'}}/>
     </Stack>
   )
 }
