@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import {Box,Typography} from '@mui/material'
 
 const Blog = () => {
   return (
-    <h1>......Coming Soon.....</h1>
+    <Box m={20} ml={57}>
+      <Typography variant='h3'>
+        Coming Soon.....
+      </Typography>
+    </Box>
   )
 }
 

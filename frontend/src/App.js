@@ -13,11 +13,11 @@ import BlogDetail from "./pages/BlogDetail";
 import Product from "./pages/Product";
 import ProductDetail from "./pages/ProductDetail"
 
+
 const App = () => {
   return (
     <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
-      <CssBaseline/>
-      <Header />
+     <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetail />} />

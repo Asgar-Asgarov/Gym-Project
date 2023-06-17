@@ -109,7 +109,7 @@ const CalorieCalculator = () => {
           <TableCell>
           <label>Activity Level:</label>
           </TableCell>
-          <TableCell align="right">
+          <TableCell align="right" sx={{display:{xs:'none',lg:'block'}}}>
             {" "}
             <select value={activityLevel} onChange={(e) => setActivityLevel(parseFloat(e.target.value))}>
           <option value={1.2}>Sedentary (little or no exercise)</option>
